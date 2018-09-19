@@ -1,3 +1,9 @@
+/* ouster_client/src/main.cpp
+ *
+ *
+ */
+
+
 #include <cstdint>
 #include <cstring>
 #include <iomanip>
@@ -82,7 +88,7 @@ int main(int argc, char** argv) {
             if (OS1::read_imu_packet(*cli, imu_buf)) handle_imu(imu_buf);
         }
 
-        if (n_imu_packets % 50 == 0) print_stats();
+        if (n_imu_packets % 10 == 0) print_stats();
     }
 
     return 0;
